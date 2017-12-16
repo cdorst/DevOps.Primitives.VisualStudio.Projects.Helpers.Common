@@ -39,7 +39,6 @@
         public static MsBuildProperty IntermediateOutputPath(string value, string condition = null) => new MsBuildProperty(PropertyConstants.IntermediateOutputPath, value, condition);
         public static MsBuildProperty KeyContainerName(string value, string condition = null) => new MsBuildProperty(PropertyConstants.KeyContainerName, value, condition);
         public static MsBuildProperty KeyOriginatorFile(string value, string condition = null) => new MsBuildProperty(PropertyConstants.KeyOriginatorFile, value, condition);
-        public static MsBuildProperty NoWin32Manifest(string value, string condition = null) => new MsBuildProperty(PropertyConstants.NoWin32Manifest, value, condition);
         public static MsBuildProperty ModuleAssemblyName(string value, string condition = null) => new MsBuildProperty(PropertyConstants.ModuleAssemblyName, value, condition);
         public static MsBuildProperty NoLogo(string value, string condition = null) => new MsBuildProperty(PropertyConstants.NoLogo, value, condition);
         public static MsBuildProperty NoStdLib(string value, string condition = null) => new MsBuildProperty(PropertyConstants.NoStdLib, value, condition);
