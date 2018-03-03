@@ -6,11 +6,11 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>CDorst.DevOps.Primitives.VisualStudio.Projects.Helpers.Common</PackageId>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.1.5</Version>
+    <Version>1.1.6</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CDorst.DevOps.Primitives.VisualStudio.Projects" Version="2.1.4" />
+    <PackageReference Include="CDorst.DevOps.Primitives.VisualStudio.Projects" Version="2.1.5" />
   </ItemGroup>
 
 </Project>
