@@ -69,10 +69,12 @@ namespace DevOps.Primitives.VisualStudio.Projects.Helpers.Common
             string copyToOutputDirectory = null,
             string condition = null)
         {
-            var attributes = new List<MsBuildItemAttribute>();
-            attributes.Add(ItemAttributes.Generator(generator));
-            attributes.Add(ItemAttributes.LastGenOutput(lastGenOutput));
-            attributes.Add(ItemAttributes.CustomToolNamespace(customToolNamespace));
+            var attributes = new List<MsBuildItemAttribute>
+            {
+                ItemAttributes.Generator(generator),
+                ItemAttributes.LastGenOutput(lastGenOutput),
+                ItemAttributes.CustomToolNamespace(customToolNamespace)
+            };
             if (!string.IsNullOrWhiteSpace(dependentUpon)) attributes.Add(ItemAttributes.DependentUpon(dependentUpon));
             if (!string.IsNullOrWhiteSpace(link)) attributes.Add(ItemAttributes.Link(link));
             if (!string.IsNullOrWhiteSpace(publishState)) attributes.Add(ItemAttributes.PublishState(publishState));
@@ -95,11 +97,13 @@ namespace DevOps.Primitives.VisualStudio.Projects.Helpers.Common
             string copyToOutputDirectory = null,
             string condition = null)
         {
-            var attributes = new List<MsBuildItemAttribute>();
-            attributes.Add(ItemAttributes.Generator(generator));
-            attributes.Add(ItemAttributes.LastGenOutput(lastGenOutput));
-            attributes.Add(ItemAttributes.CustomToolNamespace(customToolNamespace));
-            attributes.Add(ItemAttributes.LogicalName(logicalName));
+            var attributes = new List<MsBuildItemAttribute>
+            {
+                ItemAttributes.Generator(generator),
+                ItemAttributes.LastGenOutput(lastGenOutput),
+                ItemAttributes.CustomToolNamespace(customToolNamespace),
+                ItemAttributes.LogicalName(logicalName)
+            };
             if (!string.IsNullOrWhiteSpace(dependentUpon)) attributes.Add(ItemAttributes.DependentUpon(dependentUpon));
             if (!string.IsNullOrWhiteSpace(link)) attributes.Add(ItemAttributes.Link(link));
             if (visible != null) attributes.Add(ItemAttributes.Visible(visible.ToString()));
@@ -114,9 +118,11 @@ namespace DevOps.Primitives.VisualStudio.Projects.Helpers.Common
             string hintPath,
             string condition = null)
         {
-            var attributes = new List<MsBuildItemAttribute>();
-            attributes.Add(ItemAttributes.Name(name));
-            attributes.Add(ItemAttributes.HintPath(hintPath));
+            var attributes = new List<MsBuildItemAttribute>
+            {
+                ItemAttributes.Name(name),
+                ItemAttributes.HintPath(hintPath)
+            };
             return new MsBuildItem(ItemConstants.NativeReference,
                 ItemAttributeLists.Create(attributes.ToArray()),
                 condition);
@@ -132,10 +138,12 @@ namespace DevOps.Primitives.VisualStudio.Projects.Helpers.Common
             string copyToOutputDirectory = null,
             string condition = null)
         {
-            var attributes = new List<MsBuildItemAttribute>();
-            attributes.Add(ItemAttributes.Generator(generator));
-            attributes.Add(ItemAttributes.LastGenOutput(lastGenOutput));
-            attributes.Add(ItemAttributes.CustomToolNamespace(customToolNamespace));
+            var attributes = new List<MsBuildItemAttribute>
+            {
+                ItemAttributes.Generator(generator),
+                ItemAttributes.LastGenOutput(lastGenOutput),
+                ItemAttributes.CustomToolNamespace(customToolNamespace)
+            };
             if (!string.IsNullOrWhiteSpace(dependentUpon)) attributes.Add(ItemAttributes.DependentUpon(dependentUpon));
             if (!string.IsNullOrWhiteSpace(link)) attributes.Add(ItemAttributes.Link(link));
             if (visible != null) attributes.Add(ItemAttributes.Visible(visible.ToString()));
