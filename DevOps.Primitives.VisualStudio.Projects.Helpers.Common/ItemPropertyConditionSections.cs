@@ -2,7 +2,13 @@
 {
     public static class ItemPropertyConditionSections
     {
-        public static MsBuildConditionalContructItemGroupPropertyGroupSection Create(MsBuildPropertyGroupList propertyGroupList, MsBuildItemGroupList itemGroupList = null, MsBuildConditionalConstructList conditionalConstructList = null)
-            => new MsBuildConditionalContructItemGroupPropertyGroupSection(propertyGroupList, itemGroupList, conditionalConstructList);
+        public static MsBuildConditionalContructItemGroupPropertyGroupSection Create(
+            in MsBuildPropertyGroupList propertyGroupList,
+            in MsBuildItemGroupList itemGroupList = default,
+            in MsBuildConditionalConstructList conditionalConstructList = default)
+            => new MsBuildConditionalContructItemGroupPropertyGroupSection(
+                in propertyGroupList,
+                in itemGroupList,
+                in conditionalConstructList);
     }
 }

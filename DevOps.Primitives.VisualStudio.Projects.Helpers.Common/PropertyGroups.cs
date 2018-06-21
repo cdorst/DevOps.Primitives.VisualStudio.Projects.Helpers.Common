@@ -3,8 +3,6 @@
     public static class PropertyGroups
     {
         public static MsBuildPropertyGroup Create(params MsBuildProperty[] properties)
-            => new MsBuildPropertyGroup(
-                PropertyLists.Create(properties),
-                condition: default(string));
+            => new MsBuildPropertyGroup(PropertyLists.Create(properties), condition: default(MsBuildCondition));
     }
 }

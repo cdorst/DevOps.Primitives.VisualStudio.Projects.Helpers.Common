@@ -2,10 +2,13 @@
 {
     public static class ProjectFiles
     {
-        public static MsBuildProjectFile Create(ProjectType projectType, MsBuildPropertyGroupList propertyGroupList, MsBuildItemGroupList itemGroupList = null)
+        public static MsBuildProjectFile Create(
+            in ProjectType projectType,
+            in MsBuildPropertyGroupList propertyGroupList,
+            in MsBuildItemGroupList itemGroupList = default)
             => new MsBuildProjectFile(
-                projectType,
-                ItemPropertyConditionSections.Create(propertyGroupList, itemGroupList),
-                targetList: null);
+                in projectType,
+                ItemPropertyConditionSections.Create(in propertyGroupList, in itemGroupList),
+                targetList: default);
     }
 }
